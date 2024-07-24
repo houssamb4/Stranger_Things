@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stranger Things Card</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link rel="shortcut icon" href="https://vectorified.com/images/stranger-things-icon-25.jpg" type="image/png">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Cabin:400,700|Montserrat|Nunito+Sans:400,700');
+        @import url('//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css');
+
+        * {
+	 box-sizing: border-box;
+	 margin: 0;
+	 padding: 0;
+}
+ #background {
+	 display: flex;
+	 flex-wrap: wrap;
+	 justify-content: center;
+	 align-items: center;
+	 width: 100vw;
+	 height: 100vh;
+	 background-image: url('https://image.tmdb.org/t/p/original/k2dvD8ijfpxMKwZJyodBzAXh8uT.jpg');
+	 background-size: cover;
+	 background-position: center;
+	 background-repeat: no-repeat;
+}
+ .card-container {
+	 display: flex;
+	 justify-content: center;
+	 flex-wrap: wrap;
+	/* Custom, iPhone Retina */
+	/* Extra Small Devices, Phones */
+	 align-items: center;
+	 width: 69%;
+	 height: 75%;
+	 box-shadow: 2px 5px 15px 1px #04060a;
+}
+ @media only screen and (min-width: 320px) {
+	 .card-container {
+		 flex-wrap: wrap;
+	}
+}
+ @media only screen and (min-width: 480px) {
+	 .card-container {
+		 flex-wrap: nowrap;
+	}
+}
+ .poster-container {
+	 width: 100%;
+	 height: 100%;
+	 display: block;
+	 overflow: hidden;
+	 position: relative;
+}
+ #poster {
+	 transform: scale(1.5);
+	 transform-origin: 70% 19%;
+	 width: 100%;
+	 height: 100%;
+	 background-image: url('https://pitchfork-cdn.s3.amazonaws.com/content/ST-Vinyl-Vol-1-Front-Cover_3000.jpg');
+	 background-size: cover;
+	 background-position: 50% 50%;
+}
+ .card-description {
+	 letter-spacing: 0.3em;
+	 background: #000;
+	 padding: 3em;
+	 line-height: 2em;
+	 font-family: 'Nunito Sans', sans-serif;
+	 color: white;
+	 display: flex;
+	 flex-flow: column;
+	 justify-content: space-around;
+	 width: 100%;
+	 height: 100%;
+}
+ .card-description .logo-container {
+	 width: 100%;
+	 height: 100%;
+	 display: block;
+	 overflow: hidden;
+	 position: relative;
+}
+ .card-description .logo-container .logo {
+	 transform: scale(1.2);
+	 width: 35%;
+	 height: 100%;
+	 background-image: url('http://www.brandemia.org/sites/default/files/sites/default/files/logo_netflix_antes.jpg');
+	 background-size: cover;
+	 background-position: 0% 50%;
+	 background-repeat: no-repeat;
+}
+ .card-description p, .card-description .rating, .card-description .buttons {
+	 margin-top: 0.4em;
+	 margin-bottom: 0.4em;
+}
+ .card-description p {
+	 font-size: 0.85em;
+	 letter-spacing: 2px;
+}
+ .card-description .rating {
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+}
+ .card-description .span {
+	 color: #ec2416;
+	 font-weight: 700;
+}
+ .card-description label {
+	 font-family: FontAwesome;
+	 font-size: 1.4em;
+	 color: #ffd700;
+}
+ .card-description label:before {
+	 content: "\f005";
+}
+ .card-description .buttons {
+	 padding-top: 0.5em;
+	 padding-bottom: 0.5em;
+	 display: flex;
+	 justify-content: space-between;
+}
+ .card-description .buttons .button {
+	 transition: 0.4s;
+	 cursor: pointer;
+	 padding-right: 1.2em;
+	 padding-left: 1.2em;
+	 padding: 1.6em;
+	 display: flex;
+	 align-content: center;
+	 align-items: center;
+	 justify-content: space-between;
+	 letter-spacing: initial;
+	 border: 2px solid white;
+	 color: white;
+	 border-radius: 11px;
+	 height: 40px;
+}
+ .card-description .buttons .play {
+	 border: none;
+	 background: #ec2416;
+	 width: 35%;
+}
+ .card-description .buttons .play:after {
+	 font-family: FontAwesome;
+	 font-size: 1.5em;
+	 font-weight: lighter;
+	 content: "\f04b";
+}
+ .card-description .buttons .add {
+	 width: 55%;
+}
+ .card-description .buttons .add:hover {
+	 border: 2px solid #ec2416;
+	 color: #ec2416;
+}
+ .card-description .buttons .add:before {
+	 font-family: FontAwesome;
+	 font-size: 1.5em;
+	 font-weight: lighter;
+	 content: "\f067";
+}
+ 
+    </style>
+</head>
+<body>
+    <div id="background">
+        <article class="card-container">
+            <div class="poster-container">
+                <div id="poster"></div>
+            </div>
+            <div class="card-description">
+                <div class="logo-container">
+                    <div class="logo"></div>
+                </div>
+                <h2>STRANGER THINGS</h2>
+                <p class="rating">
+                    <span>
+                        <label></label>
+                        <label></label>
+                        <label></label>
+                        <label></label>
+                        <label></label>
+                    </span>
+                    <span>(3,568)</span>
+                    <span>2016</span>
+                    <span>2h 13m</span>
+                </p>
+                <p>In a small town where everyone knows everyone, a peculiar incident starts a chain of events that leads to the disappearance of a child - which begins to tear at the fabric of an otherwise peaceful community ...</p>
+                <p><span class="span">Starring:</span> Winona Ryder, David Harbour, Finn Wolfhard...</p>
+                <p><span class="span">Directed by:</span> The Duffer Brothers</p>
+                <div class="buttons">
+                    <div class="button play">PLAY NOW</div>
+                    <div class="button add">ADD TO WATCHLIST</div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <script>
+        const endpoint = 'https://api.themoviedb.org/3/account/{account_id}/favorite/movies?api_key=516adf1e1567058f8ecbf30bf2eb9378&session_id=c8e2bd462c246b141fd19ddba2e5f091f6f8aedb&language=en-US&sort_by=created_at.asc&page=1';
+
+        fetch(endpoint)
+          .then(response => response.json())
+          .then(data => {
+            console.log(data.results);
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+          });
+    </script>
+</body>
+</html>
