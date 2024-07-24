@@ -13,6 +13,7 @@
     <style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* Base styles for larger screens */
 *,
 *::before,
 *::after {
@@ -36,10 +37,10 @@ body {
     #950923 10%,
     #111113 30%
   );
-    user-select: none; 
-    -webkit-user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
+  user-select: none; 
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none;
 }
 
 .particles {
@@ -181,6 +182,7 @@ body {
 .hidden {
   display: none;
 }
+
 .st {
   text-align: center;
   flex: 0 1 auto;
@@ -221,6 +223,7 @@ body {
   border: 2px solid red;
   flex: 1 0 auto;
 }
+
 .btn-conteiner {
   display: flex;
   justify-content: center;
@@ -294,7 +297,6 @@ body {
   animation: color_anim 1s infinite 0.4s;
 }
 
-
 @keyframes color_anim {
   0% {
     fill: white;
@@ -309,7 +311,6 @@ body {
   }
 }
 
-/* Button animations */
 @-webkit-keyframes btn-content {
   0% {
     outline: 0.2em solid var(--color-background);
@@ -323,6 +324,49 @@ body {
     outline-offset: 0;
   }
 }
+
+/* Responsive styles for phones */
+@media (max-width: 600px) {
+  .swiper-slide {
+    width: 150px;
+    height: 300px;
+  }
+
+  .swiper-slide p {
+    font-size: 1rem;
+    left: 10px;
+    bottom: 5px;
+  }
+
+  .swiper-slide-active {
+    width: 250px;
+  }
+
+  #play-pause-button {
+    left: 5%;
+    bottom: 3%;
+    padding: 8px;
+  }
+
+  .audio-icon {
+    font-size: 1.5rem;
+  }
+
+  .st {
+    font-size: 2em;
+    margin-top: 10px;
+  }
+
+  .btn-content {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+
+  .icon-arrow {
+    width: 24px;
+  }
+}
+
 
 
     </style>
